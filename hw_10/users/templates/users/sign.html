@@ -1,0 +1,54 @@
+{% extends 'quotes/base.html' %}
+
+{% block content %}
+<h1>Register Form</h1>
+<form method="post"> <!-- Оскільки використано підхід Класів і 1 клас обробляє і post і get, Якщо не вказано action, то
+метод відправить на той же маршрут, з якого отримано шаблон.-->
+    {% csrf_token %}
+    <div class="form-row">
+        <div class="mb-3">
+            <label class="form-label">Username</label>
+            {{form.username}}
+        </div>
+        <span>{{form.errors.username}}</span>  <!-- якщо буде помилка валідації - вона з'явиться в цьому об'єкті-->
+    </div>
+    <div class="form-row">
+        <div class="mb-3">
+            <label class="form-label">First name</label>
+            {{form.first_name}}
+        </div>
+        <span>{{form.errors.first_name}}</span>
+    </div>
+    <div class="form-row">
+        <div class="mb-3">
+            <label class="form-label">Last name</label>
+            {{form.last_name}}
+        </div>
+        <span>{{form.errors.last_name}}</span>
+    </div>
+    <div class="form-row">
+        <div class="mb-3">
+            <label class="form-label">Email</label>
+            {{form.email}}
+        </div>
+        <span>{{form.errors.email}}</span>
+    </div>
+    <div class="form-row">
+        <div class="mb-3">
+            <label class="form-label">Password</label>
+            {{form.password1}}
+        </div>
+        <span>{{form.errors.password1}}</span>
+    </div>
+    <div class="form-row">
+        <div class="mb-3">
+            <label class="form-label">Confirm Password</label>
+            {{form.password2}}
+        </div>
+        <span>{{form.errors.password2}}</span>
+    </div>
+    <button type="submit" class="btn btn-primary">SignIn</button>
+
+</form>
+
+{% endblock %}
