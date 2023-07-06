@@ -21,6 +21,14 @@
     margin-top: 10px;
 }
 
+.form-label {
+    display:inline-block;
+    min-width: 150px;
+    font-weight: bold;
+    text-size: 22px;
+    vertical-align: top;
+}
+
 .tag {
     padding: 2px 5px;
     border-radius: 5px;

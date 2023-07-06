@@ -9,7 +9,8 @@ class RegisterForm(UserCreationForm):
     last_name = CharField(max_length=100, widget=TextInput(attrs={"class": "form-control"}))
     email = EmailField(max_length=100, required=True, widget=TextInput(attrs={"class": "form-control"}))
     password1 = CharField(max_length=12, min_length=3, required=True, widget=TextInput(attrs={"class": "form-control"}))
-    password2 = CharField(max_length=12, min_length=3, required=True, widget=PasswordInput(attrs={"class": "form-control"}))
+    password2 = CharField(max_length=12, min_length=3, required=True,
+                          widget=PasswordInput(attrs={"class": "form-control"}))
 
     class Meta:
         model = User

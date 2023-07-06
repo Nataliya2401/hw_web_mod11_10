@@ -1,0 +1,23 @@
+{% extends 'quotes/base.html' %}
+
+{% block content %}
+<h2>Add Author</h2>
+
+
+<form action="/add_author" method="post" accept-charset="utf-8">
+        <input type="hidden" name="csrf_token" value="bKQidURkxryIMTcESBJnFvhgfuXwpAqOVlsZatezjYHCPNGoLWDm">
+        <div class="row">
+            <div class="form-group col-xs-3">
+                <label for="username">Username</label>
+                <input type="text" class="form-control" id="username" name="username">
+            </div>
+        </div>
+        <div class="row">
+            <div class="form-group col-xs-3">
+                <label for="username">Password</label>
+                <input type="password" class="form-control" id="password" name="password">
+            </div>
+        </div>
+        <input type="submit" value="Login" class="btn btn-primary">
+
+    </form>

@@ -12,9 +12,11 @@
 </body>
 </html>
 
-
-
-
+<!--
+замість такого формування url
+<a href="{% url 'quotes:about' quote.author.id %}">(about_author)</a>
+використано ф-ю get_absolute_url в моделі Автор
+-->
 <!--<!DOCTYPE html>-->
 <!--<html lang="en">-->
 <!--<head>-->
